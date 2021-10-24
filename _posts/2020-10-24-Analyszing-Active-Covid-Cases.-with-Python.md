@@ -47,5 +47,30 @@ import warnings
 warnings.filterwarnings('ignore')
 ```
 
+---
 
+Now lets import the raw data that have been loaded and saved as .CSV datasets.  For this project the files were downloaded from Johns Hopkins website.
+
+```ruby
+urls = 
+[
+    'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv',
+    'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_global.csv',
+    'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_recovered_global.csv'
+]
+
+#Get data from URL and set into CSV files - #for Windows use wget - #for Jupyter use urllib.request
+[urllib.request.urlretrieve(url) for url in urls]
+```
+
+Now that we have imported our .CSV files and saved them, we can now retrieve and start to read the files
+
+```ruby
+confirmed_df = pd.read_csv('time_series_covid19_confirmed_global.csv')
+deaths_df = pd.read_csv('time_series_covid19_deaths_global.csv')
+recovered_df = pd.read_csv('time_series_covid19_recovered_global.csv')
+```
+
+```ruby
+```
 
