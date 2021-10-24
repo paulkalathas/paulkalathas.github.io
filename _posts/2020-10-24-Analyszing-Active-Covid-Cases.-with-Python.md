@@ -7,9 +7,9 @@ tags: [Python, Primes]
 
 First let's start by setting up a variable that will act as the upper limit of numbers we want to search through. We'll start with 20, so we're essentially wanting to find all prime numbers that exist that are equal to or smaller than 20
 
-'''ruby
+```ruby
 n = 20
-'''
+```
 
 
 
