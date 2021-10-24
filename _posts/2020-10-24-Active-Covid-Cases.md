@@ -1,6 +1,6 @@
 ---
 layout: post
 title: Analyzing Active Covid Cases with Python
-image: "/posts/primes_image.jpeg"
-tags: [Python, Primes]
+image: "/posts/coronavirus-2.jpeg"
+tags: [Python, Covid]
 ---
