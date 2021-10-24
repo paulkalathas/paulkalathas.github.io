@@ -5,8 +5,10 @@ image: "/posts/coronavirus-2.jpg"
 tags: [Python, Covid]
 ---
 
-```ruby
-import datetime as dt
+```python
+confirmed_df = pd.read_csv('time_series_covid19_confirmed_global.csv')
+deaths_df = pd.read_csv('time_series_covid19_deaths_global.csv')
+recovered_df = pd.read_csv('time_series_covid19_recovered_global.csv')
 ```
 
 
