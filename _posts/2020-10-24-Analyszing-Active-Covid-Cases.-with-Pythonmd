@@ -5,10 +5,10 @@ image: "/posts/coronavirus-2.jpg"
 tags: [Python, Covid]
 ---
 
-```python
-confirmed_df = pd.read_csv('time_series_covid19_confirmed_global.csv')
-deaths_df = pd.read_csv('time_series_covid19_deaths_global.csv')
-recovered_df = pd.read_csv('time_series_covid19_recovered_global.csv')
+First let's start by setting up a variable that will act as the upper limit of numbers we want to search through. We'll start with 20, so we're essentially wanting to find all prime numbers that exist that are equal to or smaller than 20
+
+```ruby
+n = 20
 ```
 
 
