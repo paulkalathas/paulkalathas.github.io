@@ -23,7 +23,7 @@ avatar_image: /img/<profile_pic.jpg>
 #-------------------------------
 # Contact links
 linkedln: "https://www.linkedin.com/in/paulkalathas/#" # Add your linkedln handle
-github: "https://paulkalathas.github.io/"  # Add your github handle
+github: "https://github.com/paulkalathas/"  # Add your github handle
 
 paginate: 6
 paginate_path: "/page/:num"
