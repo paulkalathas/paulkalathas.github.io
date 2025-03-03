@@ -4,9 +4,31 @@ title: Extract data from RapidAPI, transform it, and load it into a MySQL databa
 image: "img/posts/ETL-Pipeline.jpg"
 tags: [Python, ETL, Pipeline, Rest API]
 ---
+This project demonstrates how to:
 
+> Extract real estate rental data from RapidAPI’s Rental Estimate API.
+> Transform the data into a structured format for analysis.
+> Load the processed data into a MySQL database.
+> 
+By the end of this project, we will have a structured real estate rental database that can be used for market analysis, price predictions, or integration into an analytics dashboard.
+
+Real estate is a data-driven industry. Whether you're an investor, agent, or renter, access to accurate pricing data can make or break decisions. The problem? Data is often scattered across multiple sources or behind paywalls.
+
+With this ETL pipeline, I: ✅ Automate Data Collection (No more manual scraping!)
+✅ Normalize & Structure the Data (Ready for analysis)
+✅ Store in MySQL (For querying & insights)
+
+This is not just another API project—this is data science applied to the real world.
+---
 Step 1: Extract Data from RapidAPI
-We will send a GET request to RapidAPI’s Rental Estimate API and retrieve rental data.
+The Data Source
+For this project, I chose RapidAPI’s Rental Estimate API because it provides real-time rental price estimates and comparable property listings.
+
+What We Are Extracting
+We will request data for a 4-bedroom house in San Antonio, TX and retrieve:
+
+Estimated rent price
+Comparable properties (location, price, size, and more)
 
 ```python
 import requests
@@ -38,10 +60,9 @@ def extract_data():
     else:
         print("Failed to fetch data:", response.status_code, response.text)
         return None
-```
-
 # Fetch Data
 api_data = extract_data()
+---
 
 Explanation:
 > We define the API URL and required headers.
@@ -51,6 +72,12 @@ Explanation:
 
 Step 2: Transform Data
 Now, we will extract key fields from the API response and prepare them for MySQL.
+
+Why Transformation is Necessary?
+
+> Raw API data is often nested and unstructured.
+> Some fields are unnecessary for analysis.
+> Dates need formatting for MySQL.
 ```
 
 ```python
