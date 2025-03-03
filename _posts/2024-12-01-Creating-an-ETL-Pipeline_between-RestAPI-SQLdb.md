@@ -9,7 +9,7 @@ This project demonstrates how to:
 > Extract real estate rental data from RapidAPI’s Rental Estimate API.
 > Transform the data into a structured format for analysis.
 > Load the processed data into a MySQL database.
-> 
+
 By the end of this project, we will have a structured real estate rental database that can be used for market analysis, price predictions, or integration into an analytics dashboard.
 
 Real estate is a data-driven industry. Whether you're an investor, agent, or renter, access to accurate pricing data can make or break decisions. The problem? Data is often scattered across multiple sources or behind paywalls.
@@ -128,12 +128,14 @@ def transform_data(api_data):
 rental_info, listings_data = transform_data(api_data)
 
 Explanation:
->  The function extracts rental price summary and individual listings.
+> The function extracts rental price summary and individual listings.
 > It ensures missing data fields are handled using get().
+
 ```
 
 Step 3: Load Data into MySQL
-Now, we create a MySQL database and tables.
+> Now, we create a MySQL database and tables.
+> These can then be further analyzed or if required we can use the data to create meaningful reports and dashboards to support making data driven changes and provide insights.
 
 
 ```python
@@ -212,7 +214,8 @@ Explanation:
 ```
 
 Step 4: Insert Data into MySQL
-Now, we insert transformed data into MySQL.
+> Now, we insert transformed data into MySQL database that we created in the previous step.
+> This will then allow us to perform further analysis either using the SQL libraries through python or directly from MySQL
 
 
 ```python
@@ -247,3 +250,4 @@ def load_data(rental_info, listings_data):
     connection.close()
 
 load_data(rental_info, listings_data)
+```
