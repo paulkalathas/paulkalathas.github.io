@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Extract data from RapidAPI, transform it, and load it into a MySQL database.
-image: "img/posts/ETL-Pipeline.jpg"
+image: "/posts/ETL-Pipeline.jpg" 
 tags: [Python, ETL, Pipeline, Rest API]
 ---
 This project demonstrates how to:
