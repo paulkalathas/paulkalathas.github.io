@@ -27,7 +27,7 @@ The query retrieves the following key attributes:
 ---
 # Table Joins and Data Cleaning
 
-1. Joining Freight Rates (freightrates)
+# Joining Freight Rates (freightrates):
 
 The freightrates table contains freight cost details for shipments. The join is performed using Origin_Port and Destination_Port from orderlist, ensuring accurate freight cost mapping.
 
@@ -38,13 +38,13 @@ LEFT JOIN logisticsdb.freightrates f
     AND o.Destination_Port = f.dest_port_cd
 ```
 
-> Data Cleaning:
+Data Cleaning:
 
 Ensures all orders have freight rate data.
 
 rate and minimum cost are retained for cost analysis.
 
-2. Integrating Warehouse Capacity and Costs (warehousecapacities & warehousecosts)
+#Integrating Warehouse Capacity and Costs (warehousecapacities & warehousecosts)
 
 The warehouse-related tables provide data about storage and handling costs. The query aggregates values using MAX() to avoid duplicates while maintaining correctness.
 
@@ -62,13 +62,13 @@ LEFT JOIN (
     ON o.Plant_Code = w.Plant_Code
 ```
 
-> Data Cleaning:
+Data Cleaning:
 
 Uses MAX() to avoid multiple records per plant.
 
 Ensures Plant_Code is correctly mapped across both tables.
 
-3. Assigning Ports to Orders (plantports)
+# Assigning Ports to Orders (plantports)
 
 The plantports table contains port locations associated with plants. To handle multiple ports, GROUP_CONCAT() is used, concatenating multiple port names into a single field.
 
@@ -83,13 +83,13 @@ LEFT JOIN (
     ON o.Plant_Code = l.Plant_Code
 ```
 
-> Data Cleaning:
+Data Cleaning:
 
 Uses GROUP_CONCAT() to merge multiple port names into a single field.
 
 Ensures each plant has its corresponding port(s) in a readable format.
 
-4. Handling Customer Data (vmicustomers)
+# Handling Customer Data (vmicustomers)
 
 To ensure correct customer mapping, the query first tries to match Customer directly. If a customer match is unavailable, it defaults to Plant_Code.
 
@@ -99,13 +99,14 @@ LEFT JOIN logisticsdb.vmicustomers vm
 LEFT JOIN logisticsdb.vmicustomers vm2
     ON o.Plant_Code = vm2.Plant_Code;
 ```
-> Data Cleaning:
+
+Data Cleaning:
 
 Uses COALESCE(vm.Customer, vm2.Customer, 'Unknown Customer') to fill missing values.
 
 Ensures all records have a valid customer name.
 
-Full SQL Query
+# Full SQL Query
 
 ```SQL
 SELECT 
