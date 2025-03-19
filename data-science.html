@@ -4,25 +4,18 @@ title: Data Science Projects
 permalink: /data-science.html
 ---
 
-<div class="container text-center">
-    <h2>📊 Data Science Projects</h2>
-    
-    <div class="row" style="display: flex; flex-wrap: wrap; justify-content: space-between;">
-        {% for post in site.posts %}
-            {% if post.tags contains "Data Science" %}
-                <div class="project-card" style="width: 48%; margin-bottom: 20px;">
-                    {% include post-card.html %}
-                </div>
-            {% endif %}
-        {% endfor %}
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-t-12 text-center">
+            <h2>📊 Data Science Projects</h2>
+            <div class="row">
+                {% for post in site.posts %}
+                    {% if post.tags contains "Data Science" %}
+                        {% include post-card.html %}
+                    {% endif %}
+                {% endfor %}
+            </div>
+            {% include pagination.html %}
+        </div>
     </div>
 </div>
-
-<style>
-.project-card {
-    background: #fff;
-    padding: 15px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-}
-</style>
