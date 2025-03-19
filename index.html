@@ -3,34 +3,13 @@ layout: default
 ---
 <div class="container">
     <div class="row">
-        <div class="col col-12 text-center">
-            <h2>Welcome to My Portfolio</h2>
-            <p>Explore my projects by category:</p>
-            <button class="filter-btn" data-category="data-science">📊 Data Science</button>
-            <button class="filter-btn" data-category="automation">🤖 Automation</button>
-            <button class="filter-btn" data-category="erp">🏢 ERP</button>
+        <div class="col col-12 col-t-12">
+            <div class="row">
+                {% for post in paginator.posts %}
+                    {% include post-card.html %}
+                {% endfor %}
+            </div>
+            {% include pagination.html %}
         </div>
     </div>
-    <div class="row" id="project-list">
-        {% for post in site.posts %}
-            <div class="project-card" data-category="{{ post.tags | join: ' ' }}">
-                {% include post-card.html %}
-            </div>
-        {% endfor %}
-    </div>
 </div>
-
-<script>
-document.querySelectorAll('.filter-btn').forEach(button => {
-    button.addEventListener('click', function() {
-        let category = this.getAttribute('data-category');
-        document.querySelectorAll('.project-card').forEach(card => {
-            if (card.getAttribute('data-category').includes(category)) {
-                card.style.display = "block";
-            } else {
-                card.style.display = "none";
-            }
-        });
-    });
-});
-</script>
