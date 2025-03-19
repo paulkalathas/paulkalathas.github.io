@@ -11,7 +11,7 @@ plugins:
 title: "<span style='color:#f58506'>Portfolio</span> | Paul Kalathas"
 description: "Hi, I'm Paul – a passionate professional in Data Science, Automation, and ERP solutions. My portfolio showcases projects that drive efficiency, business impact, and innovation. Whether it's predictive analytics, process automation, or ERP optimization, I focus on delivering value through data-driven solutions. Feel free to explore my work on GitHub and LinkedIn, or download my resume using the links below!"
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://kalathasconsulting.com/" # the base hostname & protocol for your site, e.g. http://example.com
 include: ["*.html"]
 
 #-------------------------------
