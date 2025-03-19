@@ -2,7 +2,7 @@
 layout: post
 title: Analyzing Active Covid Cases with Python
 image: "/posts/coronavirus-2.jpg"
-tags: [Python, Primes]
+tags: [Python, Primes, Data Science]
 ---
 
 First let's start by importing all of the required modules needed for this exercise.  All of these might not be known at the start of your planning and mapping out you data analysis but the list can be added to later.  Let's get started
