@@ -43,6 +43,11 @@ defaults:
       share: false
 
 #-------------------------------
+# Custom Includes
+include:
+  - _includes/header.html
+
+#-------------------------------
 # Exclude from processing.
 # exclude:
 #   - Gemfile
