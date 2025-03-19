@@ -1,0 +1,19 @@
+---
+layout: default
+title: ERP Projects
+permalink: /erp/
+---
+
+<div class="container">
+    <h2>🏢 ERP Projects</h2>
+    
+    <div class="row">
+        {% for post in site.posts %}
+            {% if post.tags contains "ERP" %}
+                <div class="project-card">
+                    {% include post-card.html %}
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
