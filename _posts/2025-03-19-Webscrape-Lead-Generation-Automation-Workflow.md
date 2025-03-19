@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Social Media Post Automation Workflow
+title: Webscrape Lead Generation Automation Workflow
 image: "/posts/make-automation-workflow-webscrape.png"
 tags: [Make, API, Automation]
 ---
