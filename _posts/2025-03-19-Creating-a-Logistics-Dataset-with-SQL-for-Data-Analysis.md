@@ -38,7 +38,7 @@ LEFT JOIN logisticsdb.freightrates f
     AND o.Destination_Port = f.dest_port_cd
 ```
 
-Data Cleaning:
+> Data Cleaning:
 
 Ensures all orders have freight rate data.
 
@@ -62,7 +62,7 @@ LEFT JOIN (
     ON o.Plant_Code = w.Plant_Code
 ```
 
-Data Cleaning:
+> Data Cleaning:
 
 Uses MAX() to avoid multiple records per plant.
 
@@ -83,7 +83,7 @@ LEFT JOIN (
     ON o.Plant_Code = l.Plant_Code
 ```
 
-Data Cleaning:
+> Data Cleaning:
 
 Uses GROUP_CONCAT() to merge multiple port names into a single field.
 
@@ -100,7 +100,7 @@ LEFT JOIN logisticsdb.vmicustomers vm2
     ON o.Plant_Code = vm2.Plant_Code;
 ```
 
-Data Cleaning:
+> Data Cleaning:
 
 Uses COALESCE(vm.Customer, vm2.Customer, 'Unknown Customer') to fill missing values.
 
