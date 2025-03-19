@@ -17,8 +17,8 @@ include: ["*.html"]
 #-------------------------------
 # About Section
 subtitle: "Data Science | Automation | ERP <span style='color:#f58506'>Portfolio</span>"
-home:  <a href='index.html' style='color:#f58506; font-weight:bold;'>🏠 Home</a>"
-location: "Perth, Australia
+location: "Perth, Australia"
+home_link: "<a href='index.html' style='color:#f58506; font-weight:bold;'>🏠 Home</a>"
 resume_url: /docs/Paul Kalathas - Full CV.docx
 avatar_image: img/paul_kalathas.jpg
 
