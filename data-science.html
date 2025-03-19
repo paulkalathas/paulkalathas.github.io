@@ -1,0 +1,19 @@
+---
+layout: default
+title: Data Science Projects
+permalink: /data-science/
+---
+
+<div class="container">
+    <h2>📊 Data Science Projects</h2>
+    
+    <div class="row">
+        {% for post in site.posts %}
+            {% if post.tags contains "Data Science" %}
+                <div class="project-card">
+                    {% include post-card.html %}
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
