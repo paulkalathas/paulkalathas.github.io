@@ -11,7 +11,7 @@ permalink: /machine-learning.html
             <a href="index.html" class="home-btn">🏠 Return to Home</a>
             <div class="row">
                 {% for post in site.posts %}
-                    {% if post.tags contains "Data Science" %}
+                    {% if post.tags contains "Machine Learning" %}
                         {% include post-card.html %}
                     {% endif %}
                 {% endfor %}
