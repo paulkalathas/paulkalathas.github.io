@@ -1,15 +1,41 @@
 ---
 layout: default
 ---
-<div class="container">
-    <div class="row">
-        <div class="col col-12 col-t-12">
-            <div class="row">
-                {% for post in paginator.posts %}
-                    {% include post-card.html %}
-                {% endfor %}
-            </div>
-            {% include pagination.html %}
-        </div>
+<div class="container text-center">
+    <h2>Welcome to My Portfolio</h2>
+    <p>Select a category to view related projects:</p>
+    
+    <div class="button-container">
+        <a href="data-science.html" class="category-btn">📊 Data Science</a>
+        <a href="automation.html" class="category-btn">🤖 Automation</a>
+        <a href="erp.html" class="category-btn">🏢 ERP</a>
     </div>
 </div>
+
+<style>
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.category-btn {
+    display: inline-block;
+    padding: 20px 40px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.category-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.4);
+}
+</style>
