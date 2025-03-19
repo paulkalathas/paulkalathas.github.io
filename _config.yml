@@ -23,7 +23,7 @@ avatar_image: img/paul_kalathas.jpg
 #-------------------------------
 # Contact links
 linkedln: "https://www.linkedin.com/in/paulkalathas/#" # Add your linkedln handle
-github: "https://github.com/paulkalathas/"  # Add your github handle
+github: "https://paulkalathas.github.io/data-science.html"  # Add your github handle
 
 paginate: 6
 paginate_path: "/page/:num"
