@@ -4,7 +4,7 @@ title: Creating a Logistics Dataset with SQL for Data Analysis
 image: "/posts/logistics-analysis.png"
 tags: [Python, Primes, Data Science]
 ---
-Introduction
+# Introduction
 
 Managing and analyzing logistics data efficiently requires structured datasets that integrate multiple data sources. This SQL query constructs a comprehensive dataset by combining various logistics-related tables, ensuring data integrity and completeness. The resulting dataset, FullDataset, is optimized for analysis in tools like Power BI.
 
@@ -16,13 +16,13 @@ Selected Columns
 
 The query retrieves the following key attributes:
 
-Order Information: Order_ID, Order_Date, Origin_Port, Destination_Port, Carrier, Service_Level
+1. Order Information: Order_ID, Order_Date, Origin_Port, Destination_Port, Carrier, Service_Level
 
-Customer & Product Details: Customer, Verified_Customers, Product_ID, Plant_Code
+2. Customer & Product Details: Customer, Verified_Customers, Product_ID, Plant_Code
 
-Freight Costs & Transport Details: Minimum_Cost, Freight_Rate, Transport_Mode, Transport_Days
+3. Freight Costs & Transport Details: Minimum_Cost, Freight_Rate, Transport_Mode, Transport_Days
 
-Warehouse Data: Daily_Capacity, Cost_Per_Unit, Port
+4. Warehouse Data: Daily_Capacity, Cost_Per_Unit, Port
 
 ---
 # Table Joins and Data Cleaning
@@ -38,7 +38,7 @@ LEFT JOIN logisticsdb.freightrates f
     AND o.Destination_Port = f.dest_port_cd
 ```
 
-# Data Cleaning:
+> Data Cleaning:
 
 Ensures all orders have freight rate data.
 
@@ -62,7 +62,7 @@ LEFT JOIN (
     ON o.Plant_Code = w.Plant_Code
 ```
 
-# Data Cleaning:
+> Data Cleaning:
 
 Uses MAX() to avoid multiple records per plant.
 
@@ -83,7 +83,7 @@ LEFT JOIN (
     ON o.Plant_Code = l.Plant_Code
 ```
 
-# Data Cleaning:
+> Data Cleaning:
 
 Uses GROUP_CONCAT() to merge multiple port names into a single field.
 
@@ -93,12 +93,13 @@ Ensures each plant has its corresponding port(s) in a readable format.
 
 To ensure correct customer mapping, the query first tries to match Customer directly. If a customer match is unavailable, it defaults to Plant_Code.
 
+```SQL
 LEFT JOIN logisticsdb.vmicustomers vm
     ON o.Customer = vm.Customer  
 LEFT JOIN logisticsdb.vmicustomers vm2
     ON o.Plant_Code = vm2.Plant_Code;
-
-# Data Cleaning:
+```
+> Data Cleaning:
 
 Uses COALESCE(vm.Customer, vm2.Customer, 'Unknown Customer') to fill missing values.
 
@@ -160,17 +161,17 @@ LEFT JOIN logisticsdb.vmicustomers vm2
     ON o.Plant_Code = vm2.Plant_Code;
 ```
 
-Conclusion
+# Conclusion
 
 This SQL query efficiently structures logistics data by merging multiple sources, cleaning inconsistencies, and ensuring referential integrity. The FullDataset is now optimized for business analysis, performance tracking, and visualization in Power BI or other analytical tools.
 
 With this dataset, analysts can:
 
-Track freight costs per shipment.
+1. Track freight costs per shipment.
 
-Analyze warehouse capacities and costs.
+2. Analyze warehouse capacities and costs.
 
-Optimize supply chain operations.
+3. Optimize supply chain operations.
 
-Improve customer service and delivery efficiency.
+4. Improve customer service and delivery efficiency.
 
