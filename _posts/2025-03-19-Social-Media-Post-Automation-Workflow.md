@@ -7,6 +7,6 @@ tags: [Make, API, Automation]
 > Introduction
 ---
 
-"/posts/make-social_media-automation.png"
+
 
 
