@@ -3,8 +3,8 @@
 Welcome to my personal portfolio website! 🚀  
 This site is built using **Jekyll + GitHub Pages** and showcases my work in:
 
-- 📊 **Data Science**
 - 🤖 **Automation**
+- 📊 **Data Science**
 - 🏢 **ERP Implementations**
 
 ## 🔗 Live Website
