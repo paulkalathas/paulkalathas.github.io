@@ -8,6 +8,7 @@ permalink: /data-science.html
     <div class="row">
         <div class="col col-12 col-t-12 text-center">
             <h2>📊 Data Science Projects</h2>
+            <a href="index.html" class="home-btn">🏠 Return to Home</a>
             <div class="row">
                 {% for post in site.posts %}
                     {% if post.tags contains "Data Science" %}
@@ -19,3 +20,22 @@ permalink: /data-science.html
         </div>
     </div>
 </div>
+
+<style>
+.home-btn {
+    display: inline-block;
+    margin: 15px auto;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.home-btn:hover {
+    background-color: #f58506;
+}
+</style>
