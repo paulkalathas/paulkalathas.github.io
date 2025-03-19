@@ -19,7 +19,7 @@ include: ["*.html"]
 subtitle: "Data Science | Automation | ERP <span style='color:#f58506'>Portfolio</span>"
 location: "Perth, Australia"
 resume_url: /docs/Paul Kalathas - Full CV.docx
-avatar_image: img/Picture1.jpg
+avatar_image: img/paul_kalathas.jpg
 #-------------------------------
 # Contact links
 linkedln: "https://www.linkedin.com/in/paulkalathas/#" # Add your linkedln handle
