@@ -17,9 +17,10 @@ include: ["*.html"]
 #-------------------------------
 # About Section
 subtitle: "Data Science | Automation | ERP <span style='color:#f58506'>Portfolio</span>"
-location: "Perth, Australia"
+location: "Perth, Australia | <a href='index.html' style='color:#f58506; font-weight:bold;'>🏠 Home</a>"
 resume_url: /docs/Paul Kalathas - Full CV.docx
 avatar_image: img/paul_kalathas.jpg
+
 #-------------------------------
 # Contact links
 linkedln: "https://www.linkedin.com/in/paulkalathas/#" # Add your linkedln handle
@@ -40,7 +41,6 @@ defaults:
       read_time: true
       share: false
 
-
 #-------------------------------
 # Exclude from processing.
 # exclude:
@@ -51,4 +51,3 @@ defaults:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
-
