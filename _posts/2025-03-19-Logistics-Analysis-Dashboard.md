@@ -7,7 +7,7 @@ tags: [Make, API, Data Science]
 Introduction
 ---
 
-> Dashboard Link: "/posts/Logistics Dataset Analysis.pbit"
+> Dashboard Link: "img/posts/Logistics-Dataset-Analysis.pbit"
 
 Each DAX query below is structured with a detailed explanation of its purpose, calculations, and where to use it in Power BI.
 
