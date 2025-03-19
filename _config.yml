@@ -8,14 +8,14 @@ plugins:
 
 #-------------------------------
 # General Site Settings
-title: Paul Kalathas
-description: "Hi I'm Paul, and I'm a Data Scientist in the making.  My portfolio focuses on projects for learning, of interest and with business focus & impact. Please visit my Github & LinkedIn pages (or download my Resume) by using the links below!"
+title: <span style="color:#f58506"> Portfolio </span> Paul Kalathas
+description: "Hi, I'm Paul – a passionate professional in Data Science, Automation, and ERP solutions. My portfolio showcases projects that drive efficiency, business impact, and innovation. Whether it's predictive analytics, process automation, or ERP optimization, I focus on delivering value through data-driven solutions. Feel free to explore my work on GitHub and LinkedIn, or download my resume using the links below!"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 #-------------------------------
 # About Section
-subtitle: Data Science <span style="color:#f58506"> Portfolio </span>
+subtitle: Data Science | Automation | ERP
 location: "Perth, Australia"
 resume_url: /docs/Paul Kalathas - Full CV.docx
 avatar_image: img/Picture1.jpg
